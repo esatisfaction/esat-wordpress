@@ -1,6 +1,3 @@
-# Composer files
-vendor
-
 # OS Helper files
 .php_cs.cache
 .DS_Store
