@@ -24,7 +24,7 @@ class Esatisfaction_StringHelper
     {
         $length = strlen($needle);
 
-        return (substr($haystack, 0, $length) === $needle);
+        return substr($haystack, 0, $length) === $needle;
     }
 
     /**
@@ -40,7 +40,7 @@ class Esatisfaction_StringHelper
             return true;
         }
 
-        return (substr($haystack, -$length) === $needle);
+        return substr($haystack, -$length) === $needle;
     }
 
     /**
@@ -75,7 +75,7 @@ class Esatisfaction_StringHelper
      *
      * @return string
      */
-    public static function interpolate($string, $parameters = [], $openingTag = "%{", $closingTag = "}", $fallback = true)
+    public static function interpolate($string, $parameters = [], $openingTag = '%{', $closingTag = '}', $fallback = true)
     {
         // Check for parameters and replace the values
         foreach ($parameters as $pKey => $pValue) {
@@ -84,7 +84,7 @@ class Esatisfaction_StringHelper
 
             // Generic Fallback
             if ($fallback) {
-                $string = str_replace("{" . $pKey . "}", $pValue, $string);
+                $string = str_replace('{' . $pKey . '}', $pValue, $string);
             }
         }
 
