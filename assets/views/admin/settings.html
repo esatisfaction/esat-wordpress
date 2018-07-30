@@ -1,0 +1,40 @@
+<div class="wrap">
+    <h1>%{header}</h1>
+    <form method="post">
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row">
+                    <label for="esatisfaction_site_id">%{label_site_id}</label>
+                </th>
+                <td>
+                    <input id="esatisfaction_site_id" type="number" name="esatisfaction[site_id]" class="regular-text" value="%{value_site_id}" required/>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    <label for="esatisfaction_auth_key">%{label_auth_key}</label>
+                </th>
+                <td>
+                    <input id="esatisfaction_auth_key" type="text" name="esatisfaction[auth_key]" class="regular-text" value="%{value_auth_key}" required/>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    <label for="esatisfaction_public_api_key">%{label_public_key}</label>
+                </th>
+                <td>
+                    <input id="esatisfaction_public_api_key" type="text" name="esatisfaction[public_api_key]" class="regular-text" value="%{value_public_key}" required/>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    <label for="esatisfaction_private_api_key">%{label_private_key}</label>
+                </th>
+                <td>
+                    <input id="esatisfaction_private_api_key" type="text" name="esatisfaction[private_api_key]" class="regular-text" value="%{value_private_key}" required/>
+                </td>
+            </tr>
+        </table>
+        %{button_submit}
+    </form>
+</div>
