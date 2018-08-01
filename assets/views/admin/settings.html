@@ -1,37 +1,32 @@
 <div class="wrap">
-    <h1>%{header}</h1>
+    <h1>General Settings</h1>
     <form method="post">
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">
-                    <label for="esatisfaction_site_id">%{label_site_id}</label>
+                    <label for="esatisfaction_application_id">Application Id</label>
                 </th>
                 <td>
-                    <input id="esatisfaction_site_id" type="number" name="esatisfaction[site_id]" class="regular-text" value="%{value_site_id}" required/>
+                    <input id="esatisfaction_application_id" type="text" name="esatisfaction[application_id]" class="regular-text" value="%{application_id}" required/>
                 </td>
             </tr>
+        </table>
+        %{button_submit}
+    </form>
+    <h1>Checkout Questionnaire Settings</h1>
+    <form method="post">
+        <table class="form-table">
             <tr valign="top">
                 <th scope="row">
-                    <label for="esatisfaction_auth_key">%{label_auth_key}</label>
+                    <label for="esatisfaction_checkout_questionnaire_id">Questionnaire Id</label>
                 </th>
                 <td>
-                    <input id="esatisfaction_auth_key" type="text" name="esatisfaction[auth_key]" class="regular-text" value="%{value_auth_key}" required/>
-                </td>
-            </tr>
-            <tr valign="top">
-                <th scope="row">
-                    <label for="esatisfaction_public_api_key">%{label_public_key}</label>
-                </th>
-                <td>
-                    <input id="esatisfaction_public_api_key" type="text" name="esatisfaction[public_api_key]" class="regular-text" value="%{value_public_key}" required/>
-                </td>
-            </tr>
-            <tr valign="top">
-                <th scope="row">
-                    <label for="esatisfaction_private_api_key">%{label_private_key}</label>
-                </th>
-                <td>
-                    <input id="esatisfaction_private_api_key" type="text" name="esatisfaction[private_api_key]" class="regular-text" value="%{value_private_key}" required/>
+                    <input id="esatisfaction_checkout_questionnaire_id" type="text" name="esatisfaction[checkout_questionnaire_id]" class="regular-text" value="%{checkout_questionnaire_id}" required/>
+                    <p class="description" id="esatisfaction_checkout_questionnaire_id-description">Checkout questionnaire will be embedded in a container with a fixed id. Go to your e-satisfaction Dashboard and set the position to the following:</p>
+                    <p>
+                        <span>Checkout Questionnaire element id:</span>
+                        <code>#esatisfaction-checkout-questionnaire-container</code>
+                    </p>
                 </td>
             </tr>
         </table>
