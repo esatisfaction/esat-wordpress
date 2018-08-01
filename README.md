@@ -8,12 +8,23 @@ of Browse, Checkout and AfterSales questionnaires.
 * Download the latest release file
 * At your wordpress admin panel navigate to plugins > add new
 * Upload the zip and activate the e-satisfaction plugin
-* Go to plugin settings and complete SITE_ID, AUTH_KEY, PUBLIC_API_KEY and PRIVATE_API_KEY
+
+## Setting Up
+
+In order to complete setting up e-satisfaction plugin, visit e-satisfaction's settings page and 
+type in the following:
+
+* Application Id
+* Checkout Questionnaire
+  * Questionnaire Id
 
 ## Features
 
 By installing this plugin you have the following questionnaires:
 
-* The e-satisfaction Browse Questionnaire
+* The e-satisfaction Browse Questionnaire in Box Mode
 * The e-satisfaction Checkout Questionnaire on the thank you page
-* The e-satisfaction AfterSales Questionnaire on your email after every complete order
+
+## Limitations
+
+This version does not support configuration for store pickup and it's false by default.
