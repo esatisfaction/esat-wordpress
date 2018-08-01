@@ -3,7 +3,7 @@
 /*
 Plugin Name: e-satisfaction Web Integration (WooCommerce)
 Description: Enable e-satisfaction.com functionality.
-Version:     1.0
+Version:     2.0
 Author:      e-satisfaction Developers
 Author URI:  https://www.e-satisfaction.com
 License:     GPL2

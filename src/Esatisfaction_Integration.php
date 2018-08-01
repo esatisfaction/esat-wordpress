@@ -19,12 +19,19 @@ class Esatisfaction_Integration
     /**
      * Attach integration library script on output buffer
      */
-    public function attachIntegration()
+    public function initializeIntegration()
     {
-        // Echo integration library script
-        Esatisfaction_ViewHelper::echoView('integration/library', [
-            'site_id' => esc_attr(get_option('esatisfaction_site_id')),
+        Esatisfaction_ViewHelper::echoView('integration/init', [
+            'application_id' => esc_attr(get_option('esatisfaction_application_id')),
         ]);
+    }
+
+    /**
+     * Attach integration library script on output buffer
+     */
+    public function attachLibrary()
+    {
+        Esatisfaction_ViewHelper::echoView('integration/library');
     }
 
     /**
@@ -32,18 +39,16 @@ class Esatisfaction_Integration
      */
     public function attachCheckoutQuestionnaire($orderId)
     {
-        // Get token
-        $token = file_get_contents(sprintf('https://www.e-satisfaction.gr/miniquestionnaire/genkey.php?site_auth=%s', esc_attr(get_option('esatisfaction_auth_key'))));
-
         // Get user's billing email
         $order = new WC_Order($orderId);
-        $user_email = $order->get_billing_email();
 
         // Embed code for Checkout Questionnaire
         Esatisfaction_ViewHelper::echoView('integration/checkout', [
-            'token' => $token,
-            'order_id' => $orderId,
-            'user_email' => $user_email,
+            'application_id' => esc_attr(get_option('esatisfaction_application_id')),
+            'checkout_questionnaire_id' => esc_attr(get_option('esatisfaction_checkout_questionnaire_id')),
+            'order_id' => $order->get_id(),
+            'order_date' => $order->get_date_created(),
+            'user_email' => $order->get_billing_email(),
         ]);
     }
 }

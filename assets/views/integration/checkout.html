@@ -1,18 +1,21 @@
 <div id="esatisfaction-checkout-questionnaire-container"></div>
 <script>
-    (function (window) {
-        window._esatisf = window._esatisf || [];
-
-        // Push order id as the e-satisfaction responder
-        window._esatisf.push(['_responder', '%{order_id}']);
-
-        // Push the unique token for displaying the questionnaire
-        window._esatisf.push(['_token', '%{token}']);
-
-        // Register user's email
-        window._esatisf.push(['_email', '%{user_email}']);
-
-        // Setup the css holder for displaying the questionnaire
-        window._esatisf.push(['_showQuestionnaire', '#esatisfaction-checkout-questionnaire-container']);
-    })(window);
+    window.esat_config = {
+        application_id: '%{application_id}',
+        collection: {
+            '%{checkout_questionnaire_id}': {
+                'questionnaire_id': '%{checkout_questionnaire_id}',
+                'metadata': {
+                    'responder': {
+                        'email': '%{user_email}'
+                    },
+                    'questionnaire': {
+                        'transaction_id': '%{order_id}',
+                        'transaction_date': '%{order_date}',
+                        'store_pickup': false
+                    }
+                }
+            }
+        }
+    };
 </script>

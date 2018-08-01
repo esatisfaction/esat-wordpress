@@ -15,7 +15,7 @@ final class Esatisfaction
     /**
      * @var string
      */
-    public $version = '1.0';
+    public $version = '2.0';
 
     /**
      * @var Esatisfaction
@@ -48,7 +48,8 @@ final class Esatisfaction
     private function initHooks()
     {
         add_action('admin_menu', ['Esatisfaction_Admin', 'createMenu']);
-        add_action('wp_footer', ['Esatisfaction_Integration', 'attachIntegration'], 20);
+        add_action('wp_head', ['Esatisfaction_Integration', 'initializeIntegration'], 20);
+        add_action('wp_footer', ['Esatisfaction_Integration', 'attachLibrary'], 20);
         add_action('woocommerce_thankyou', ['Esatisfaction_Integration', 'attachCheckoutQuestionnaire'], 1, 1);
     }
 }

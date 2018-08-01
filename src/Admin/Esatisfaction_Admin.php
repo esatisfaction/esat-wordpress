@@ -48,16 +48,9 @@ class Esatisfaction_Admin
         Esatisfaction_ViewHelper::echoView('admin/settings', [
             // Header
             'header' => __('E-satisfaction Settings', 'e-satisfaction'),
-            // Labels
-            'label_site_id' => __('Site Id', 'e-satisfaction'),
-            'label_auth_key' => __('Authentication Key', 'e-satisfaction'),
-            'label_public_key' => __('Public API Key', 'e-satisfaction'),
-            'label_private_key' => __('Private API Key', 'e-satisfaction'),
             // Values
-            'value_site_id' => esc_attr(get_option('esatisfaction_site_id')),
-            'value_auth_key' => esc_attr(get_option('esatisfaction_auth_key')),
-            'value_public_key' => esc_attr(get_option('esatisfaction_public_api_key')),
-            'value_private_key' => esc_attr(get_option('esatisfaction_private_api_key')),
+            'application_id' => esc_attr(get_option('esatisfaction_application_id')),
+            'checkout_questionnaire_id' => esc_attr(get_option('esatisfaction_checkout_questionnaire_id')),
             // Submit button
             'button_submit' => get_submit_button('Save Settings', 'primary', 'esatisfaction_submit'),
         ]);
