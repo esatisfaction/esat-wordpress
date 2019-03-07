@@ -27,14 +27,6 @@ class Esatisfaction_Integration
     }
 
     /**
-     * Attach integration library script on output buffer
-     */
-    public function attachLibrary()
-    {
-        Esatisfaction_ViewHelper::echoView('integration/library');
-    }
-
-    /**
      * @param string $orderId
      */
     public function attachCheckoutQuestionnaire($orderId)
