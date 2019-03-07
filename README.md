@@ -8,8 +8,8 @@ of Browse, Checkout and AfterSales questionnaires.
 
 |e-satisfaction Version                                                   |Branch               |
 |-------------------------------------------------------------------------|---------------------|
-|New Beta ([Dashboard Url](https://app.e-satisfaction.com))               |2.0                  |
-|Current Version ([Dashboard Url](https://dashboard.e-satisfaction.com))  |legacy-1.0           |
+|Current Version ([Dashboard Url](https://app.e-satisfaction.com))        |2.0                  |
+|Old version ([Dashboard Url](https://dashboard.e-satisfaction.com))      |legacy-1.0           |
 
 Branch `2.0` is working with the latest version of e-satisfaction, which is in beta mode.
 Master is updated with the latest version (currently `2.0`).
