@@ -24,7 +24,7 @@ If you are using e-satisfaction's old version ([dashboard url](https://dashboard
 
 ## Setting Up
 
-In order to complete setting up e-satisfaction plugin, visit e-satisfaction's settings page and 
+In order to complete setting up e-satisfaction plugin, visit wordpress settings page and select E-satisfaction to 
 type in the following:
 
 * Application Id
