@@ -1,21 +1,13 @@
 <div id="esatisfaction-checkout-questionnaire-container"></div>
 <script>
-    window.esat_config = {
-        application_id: '%{application_id}',
-        collection: {
-            '%{checkout_questionnaire_id}': {
-                'questionnaire_id': '%{checkout_questionnaire_id}',
-                'metadata': {
-                    'responder': {
-                        'email': '%{user_email}'
-                    },
-                    'questionnaire': {
-                        'transaction_id': '%{order_id}',
-                        'transaction_date': '%{order_date}',
-                        'store_pickup': false
-                    }
-                }
-            }
+    Esat.updateMetadata("%{checkout_questionnaire_id}", {
+        responder: {
+            "email": "%{user_email}",
+        },
+        questionnaire: {
+            "transaction_id": "%{order_id}",
+            "transaction_date": "%{order_date}",
+            'store_pickup': false
         }
-    };
+    });
 </script>

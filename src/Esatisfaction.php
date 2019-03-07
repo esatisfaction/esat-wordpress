@@ -49,7 +49,6 @@ final class Esatisfaction
     {
         add_action('admin_menu', ['Esatisfaction_Admin', 'createMenu']);
         add_action('wp_head', ['Esatisfaction_Integration', 'initializeIntegration'], 20);
-        add_action('wp_footer', ['Esatisfaction_Integration', 'attachLibrary'], 20);
         add_action('woocommerce_thankyou', ['Esatisfaction_Integration', 'attachCheckoutQuestionnaire'], 1, 1);
     }
 }
