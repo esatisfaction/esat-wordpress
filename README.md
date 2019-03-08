@@ -5,7 +5,6 @@ of Browse, Checkout and AfterSales questionnaires.
 
 ## Version
 
-
 |e-satisfaction Version                                                   |Branch               |
 |-------------------------------------------------------------------------|---------------------|
 |Current Version ([Dashboard Url](https://app.e-satisfaction.com))        |2.0                  |
@@ -15,6 +14,11 @@ Branch `2.0` is working with the latest version of e-satisfaction.
 Master is updated with the latest version (currently `2.0`).
 
 If you are using e-satisfaction's old version ([dashboard url](https://dashboard.e-satisfaction.com)), then see branch `legacy-1.0`.
+
+### Compatibility
+
+This branch is tested for compatibility with the following wordpress versions:
+* `Wordpress 5.1` , `WooCommerce 3.5.6`
 
 ## Installation
 
