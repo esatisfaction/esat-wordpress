@@ -7,6 +7,7 @@ in all versions (major and minor)
 To get the diff for a specific change, go to https://github.com/esatisfaction/esat-wordpress/commit/XXX where
 XXX is the change hash
 
-* 2.0.1 (future-release)
+* 2.0.2 (future-release)
+* 2.0.1 (2019-03-08)
   * Remove 2.0 from beta mode, set legacy-1.0 as old version.
   * Update the integration script to match the latest (25th February, 2019) e-satisfaction integration guidelines.
